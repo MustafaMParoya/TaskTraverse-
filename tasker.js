@@ -1,4 +1,4 @@
-package task_manager.models;
+//simple class for task..
 
 //import other files 
 
@@ -12,7 +12,9 @@ public class Task {
   private Date createdDate;
   private boolean completed = false;
 
-  // Constructor
+  //properties of tasks above ^
+
+  // Constructor for the task.. takes current date 
   public Task(String title, String description, Priority priority) {
     this.title = title;
     this.description = description;
@@ -20,6 +22,7 @@ public class Task {
     this.createdDate = new Date(); // Assume this captures the current date-time
   }
 
+  //creates a new task object 
   public Task(Task another) {
     this.title = another.title;
     this.description = another.description;
@@ -27,7 +30,7 @@ public class Task {
     this.createdDate = (Date) another.createdDate.clone(); // Clone the Date object
   }
 
-  // Getter and Setter methods (encapsulation)
+  // Getter and Setter methods for taskk object 
   public String getTitle() {
     return title;
   }
@@ -56,6 +59,8 @@ public class Task {
     return createdDate;
   }
 
+  
+//below helps mark tasks as complete 
   public void markAsComplete() {
     this.completed = true;
   }
